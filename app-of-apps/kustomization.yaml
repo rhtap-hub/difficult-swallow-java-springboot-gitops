@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  rhtap/gitops: difficult-swallow-java-springboot 
+  janus-idp.io/tekton: difficult-swallow-java-springboot
+  backstage.io/kubernetes-id: difficult-swallow-java-springboot
+  backstage.io/kubernetes-namespace: flavius-e2e 
+  app.kubernetes.io/part-of: difficult-swallow-java-springboot
+resources: 
+- application-dev.yaml 
+- application-stage.yaml 
+- application-prod.yaml  
